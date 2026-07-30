@@ -25,7 +25,7 @@ conflicted::conflicts_prefer(dplyr::filter)
 
 set.seed(69420)
 theme_set(theme_minimal(base_size = 11))
-
+setwd("C:\\Users\\cmbej\\Desktop\\Universidad\\2026-2\\Trabajo de Grado")
 dir.create("figuras",    showWarnings = FALSE)
 dir.create("datos",      showWarnings = FALSE)
 dir.create("resultados", showWarnings = FALSE)
@@ -976,7 +976,6 @@ p6 <- datos %>%
   coord_flip() +
   scale_fill_manual(values = c("Con IA" = "#3498db", "Sin IA" = "#e74c3c")) +
   labs(title = "Distribución de Tiempos por Tipo de Material y Uso de IA",
-       subtitle = paste0("Ref: ", ref_asset, " | Sin IA | Andino | No Reuse | Medium | Medium"),
        x = NULL, y = "Horas por unidad", fill = NULL) +
   theme(legend.position = "bottom")
 guardar(p6, "06_boxplot_asset_ia", 12, 8)
